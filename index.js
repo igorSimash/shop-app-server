@@ -57,6 +57,7 @@ app.post("/products", async (req, res) => {
                     height: req.body.size.height
                 },
                 weight: req.body.weight,
+                price: req.body.price
             });
             await product.save();
             res.send(product);

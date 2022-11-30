@@ -22,7 +22,10 @@ const ProductSchema = new mongoose.Schema({
     },
     weight: {
         type: String,
-    }
+    },
+    price: {
+        type: String,
+    },
 });
 const Product = mongoose.model("products", ProductSchema);
 module.exports = Product;
