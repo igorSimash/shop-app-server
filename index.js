@@ -14,7 +14,7 @@ app.use(cors());
 
 mongoose
     .connect(
-        process.env.MONGODB_CLUSTER_KEY,
+        process.env.MONGODB_CONNECT_KEY,
         {
             useNewUrlParser: true,
             useUnifiedTopology: true
