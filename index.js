@@ -5,6 +5,7 @@ const cors = require('cors');
 const productModel = require("./models/ProductModel");
 const counterModel = require("./models/CounterModel");
 const commentModel = require("./models/CommentModel");
+require("dotenv").config();
 
 const app = express();
 const port = 3001;
@@ -13,7 +14,7 @@ app.use(cors());
 
 mongoose
     .connect(
-        'mongodb+srv://Ihor:dPK2tpelov4voBCa@cluster0.mcr4dga.mongodb.net/shop?retryWrites=true&w=majority',
+        process.env.MONGODB_CLUSTER_KEY,
         {
             useNewUrlParser: true,
             useUnifiedTopology: true
